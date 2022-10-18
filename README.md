@@ -32,3 +32,8 @@ Dash is running on http://127.0.0.1:8050/
 ```
 then just go into that URL with your favorite browser.
 
+### OUR FIGMA MOCKUP
+
+```
+https://www.figma.com/file/Qr5fHoslvRaiOaAhzELAqH/Data-visualization-DS-LAB-09?node-id=0%3A1
+```
