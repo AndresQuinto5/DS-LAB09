@@ -15,6 +15,8 @@
 
 ## Requirements
 
+We are using python 3.7
+
 You can install them by running
 ```sh
 pip install -r requirements.txt 
