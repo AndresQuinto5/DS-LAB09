@@ -268,7 +268,7 @@ def prediction3(input1,input2):
 app.layout = html.Div([
 
     html.H1("Tweets, blogs y noticias en inglés", style={'text-align': 'center', 'family':'Verdana'}),
-    html.H3("Link: https://www.kaggle.com/crmercado/tweets-blogs-news-swiftkey-dataset-4million/", style={'text-align': 'center'}),
+    html.H3("Link: https://www.kaggle.com/c/nlp-getting-started/data", style={'text-align': 'center'}),
     html.H3("El data set utilizado es una recopilación de tweets, blogs y noticias en inglés donde se hallaron las palabras mas utilizadas. Lo que se pretende hacer es poder hacer un análisis sobre los textos para poder determinar qué tipos de palabras son las que tienen mayor frecuencia en cada uno de los archivos, y determinar qué tanta presencia tienen estas", style={'text-align': 'center'}),
     html.Button("NAVEGAR AL SIGUIENTE",id="next",n_clicks=0, style={'text-align': 'center', 'align-items':'center','justify-content':'center',  'height': 50, 'width': 150, 'color': 'white', 'background': '#004AAD'}),
     html.H3(random.choice(normalized[0] + normalized[1] + normalized[2]),id="data",style={'background':'#55ADEE','min-height':300, 'display': 'flex', 'align-items':'center','justify-content':'center', 'padding': 16, 'text-align': 'center','border-radius': '10px', 'color': 'white', 'margin-right': 350, 'margin-left': 350, 'align-self': 'center'}),
