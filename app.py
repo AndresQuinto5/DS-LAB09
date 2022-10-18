@@ -113,3 +113,60 @@ df['news'] = df['news'].apply(lambda line: remove_num(str(line)))
 df['twitter'] = df['twitter'].apply(lambda line: remove_num(str(line)))
 
 expresiones = []
+for i in expresiones:
+    stopwords.add(i)
+
+clean_tweets = []
+for tweet in df['twitter']:
+    word_list = []
+    for word in tweet.split():
+        word_list.append(word)
+    clean_tweets.append(' '.join(word_list))
+
+clean_blogs = []
+for blog in df['blogs']:
+    word_listo = []
+    for word in blog.split():
+        word_listo.append(word)
+    clean_blogs.append(' '.join(word_listo))
+
+clean_news = []
+for new in df['news']:
+    list_words = []
+    for word in new.split():
+        list_words.append(word)
+    clean_news.append(' '.join(list_words))
+
+global_data = clean_tweets+clean_news+clean_blogs
+val=round(len(global_data)*0.1,0)
+random_sample=random.sample(global_data,int(val))
+warnings.filterwarnings('ignore')
+
+# Digrama
+digrama=[]
+size=2
+def ngram(ngrama, size):
+    for word in range(len(random_sample)):
+        try:
+            for item in ngrams(random_sample[word].split(),size):
+                ngrama.append(item)
+        except Exception as e:
+            print(e)
+            return ngrama
+    return ngrama
+digrama = ngram(digrama, size)
+
+#Trigrama
+trigrama=[]
+size=3
+trigrama = ngram(trigrama, size)
+
+#Tetragrama
+tetragrama=[]
+size=4
+tetragrama = ngram(tetragrama, size)
+
+#Pentagrama
+pentgrama=[]
+size=5
+pentgrama = ngram(pentgrama, size)
